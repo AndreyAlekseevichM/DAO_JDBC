@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMERS
     surname varchar(255),
     age int check ( age > 0 ), check ( age < 150 ),
     phone_number varchar(255) not null default 'unknown'
-);
+    );
 
 CREATE TABLE IF NOT EXISTS ORDERS
 (
@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS ORDERS
     amount int not null check ( amount > 0 ),
     FOREIGN KEY (customer_id) REFERENCES СUSTOMERS(id)
 
-);
+    );
